@@ -7,6 +7,7 @@
   "author": "Connor Love <connor@dotconnor.com>",
   "license": "MIT",
   "scripts": {
+    "prepublish": "yarn build",
     "build": "tsc",
     "test": "jest --env=node"
   },
