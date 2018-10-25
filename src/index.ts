@@ -1,8 +1,8 @@
-function defer(): DeferedPromise<any> {
+function defer(): DeferedPromise {
 	let res: PromiseFunction = () => void 0;
 	let rej: PromiseFunction = () => void 0;
 
-	var promise: DeferedPromise<any> = new DeferedPromise((resolve, reject) => {
+	var promise: DeferedPromise = new DeferedPromise((resolve, reject) => {
 		res = resolve;
 		rej = reject;
 	});
@@ -13,7 +13,7 @@ function defer(): DeferedPromise<any> {
 	return promise;
 }
 type PromiseFunction = (value?: {} | PromiseLike<{}> | undefined) => void;
-class DeferedPromise<T> extends Promise<T> {
+class DeferedPromise extends Promise<any> {
 	public resolve: PromiseFunction = () => void 0;
 	public reject: PromiseFunction = () => void 0;
 }
