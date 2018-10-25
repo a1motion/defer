@@ -1,6 +1,6 @@
 {
   "name": "@a1motion/defer",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "lib/index.js",
   "private": false,
   "repository": "https://github.com/a1motion/defer",
@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "test": "jest --verbose --env=node --coverage"
+    "test": "jest --env=node"
   },
   "devDependencies": {
     "@types/jest": "^23.3.2",
