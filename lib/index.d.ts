@@ -1,7 +1,7 @@
-declare const _default: () => DeferedPromise<any>;
-export = _default;
+export default function defer(): DeferedPromise;
 declare type PromiseFunction = (value?: {} | PromiseLike<{}> | undefined) => void;
-declare class DeferedPromise<T> extends Promise<T> {
+export declare class DeferedPromise extends Promise<any> {
     resolve: PromiseFunction;
     reject: PromiseFunction;
 }
+export {};
