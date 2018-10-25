@@ -10,6 +10,7 @@
     "build": "tsc",
     "test": "jest --env=node"
   },
+  "types": "lib/index.d.ts",
   "devDependencies": {
     "@types/jest": "^23.3.2",
     "@types/node": "^10.12.0",
