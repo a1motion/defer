@@ -1,6 +1,6 @@
 {
   "name": "@a1motion/defer",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "lib/index.js",
   "private": false,
   "repository": "https://github.com/a1motion/defer",
