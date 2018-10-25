@@ -1,4 +1,4 @@
-module.exports = function defer(): DeferedPromise<any> {
+export = function defer(): DeferedPromise<any> {
 	let res: PromiseFunction = () => void 0;
 	let rej: PromiseFunction = () => void 0;
 
