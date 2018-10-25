@@ -1,4 +1,4 @@
-export = function defer(): DeferedPromise<any> {
+function defer(): DeferedPromise<any> {
 	let res: PromiseFunction = () => void 0;
 	let rej: PromiseFunction = () => void 0;
 
@@ -17,3 +17,6 @@ class DeferedPromise<T> extends Promise<T> {
 	public resolve: PromiseFunction = () => void 0;
 	public reject: PromiseFunction = () => void 0;
 }
+defer.DeferedPromise = DeferedPromise;
+
+export = defer;
