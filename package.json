@@ -4,13 +4,23 @@
   "main": "lib/index.js",
   "private": false,
   "repository": "https://github.com/a1motion/defer",
-  "author": "Connor Love <connor@dotconnor.com>",
+  "maintainers": [
+    {
+      "name": "Connor Love",
+      "email": "connor@a1motion.com"
+    }
+  ],
   "license": "MIT",
   "scripts": {
     "prepublish": "yarn build",
     "build": "tsc",
     "test": "jest --env=node"
   },
+  "files": [
+    "lib/*",
+    "LICENSE",
+    "README.md"
+  ],
   "types": "lib/index.d.ts",
   "devDependencies": {
     "@types/jest": "^23.3.2",
