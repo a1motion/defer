@@ -62,3 +62,4 @@ typings/
 .DS_Store
 lib/
 junit.xml
+*.tsbuildinfo
