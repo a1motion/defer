@@ -12,9 +12,10 @@
   ],
   "license": "MIT",
   "scripts": {
-    "prepublish": "yarn build",
+    "prepublishOnly": "yarn build",
     "build": "tsc",
-    "test": "jest --env=node --ci"
+    "test": "jest --env=node --ci",
+    "lint": "eslint --format=pretty '**/*.ts'"
   },
   "files": [
     "lib/*",
@@ -25,8 +26,17 @@
   "devDependencies": {
     "@types/jest": "24.0.13",
     "@types/node": "12.0.4",
+    "@typescript-eslint/parser": "^1.9.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.12.1",
+    "eslint-config-a1motion": "^2.0.0",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-formatter-pretty": "^2.1.1",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.13.0",
     "jest": "24.8.0",
     "jest-junit": "6.4.0",
+    "prettier": "^1.17.1",
     "ts-jest": "24.0.2",
     "tslint": "5.16.0",
     "typescript": "3.5.1"
