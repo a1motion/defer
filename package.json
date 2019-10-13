@@ -14,7 +14,7 @@
   "scripts": {
     "prepublishOnly": "yarn build",
     "build": "tsc",
-    "test": "jest --env=node --ci",
+    "test": "ava",
     "lint": "eslint --format=pretty '**/*.ts'"
   },
   "files": [
@@ -24,46 +24,30 @@
   ],
   "types": "lib/index.d.ts",
   "devDependencies": {
-    "@types/jest": "^24.0.18",
-    "@types/node": "^12.7.9",
-    "@typescript-eslint/parser": "^2.3.2",
+    "@types/node": "^12.7.12",
+    "@typescript-eslint/parser": "^2.3.3",
+    "ava": "^2.4.0",
     "babel-eslint": "^10.0.3",
     "eslint": "^6.5.1",
     "eslint-config-a1motion": "^3.0.2",
-    "eslint-config-prettier": "^6.3.0",
+    "eslint-config-prettier": "^6.4.0",
     "eslint-formatter-pretty": "^2.1.1",
     "eslint-plugin-prettier": "^3.1.1",
-    "eslint-plugin-react": "^7.15.1",
-    "jest": "^24.9.0",
-    "jest-junit": "^8.0.0",
+    "eslint-plugin-react": "^7.16.0",
     "prettier": "^1.18.2",
-    "ts-jest": "^24.1.0",
-    "tslint": "^5.20.0",
-    "typescript": "^3.6.3"
+    "ts-node": "^8.4.1",
+    "typescript": "^3.6.4"
   },
   "publishConfig": {
     "access": "public"
   },
-  "jest": {
-    "transform": {
-      "^.+\\.tsx?$": "ts-jest"
-    },
-    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json",
-      "node"
+  "ava": {
+    "compileEnhancements": false,
+    "extensions": [
+      "ts"
     ],
-    "testPathIgnorePatterns": [
-      "/node_modules/",
-      "/dist/"
-    ],
-    "reporters": [
-      "default",
-      "jest-junit"
+    "require": [
+      "ts-node/register"
     ]
   }
 }

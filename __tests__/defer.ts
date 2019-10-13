@@ -1,14 +1,13 @@
+import test from "ava";
 import defer from "../src";
 
-describe(`defer`, () => {
-  test(`should resolve remotely`, (done) => {
-    const d = defer();
-    d.then(done);
-    d.resolve();
-  });
-  test(`should reject remotely`, (done) => {
-    const d = defer();
-    d.then().catch(done);
-    d.reject();
-  });
+test.cb(`should resolve remotely`, (t) => {
+  const d = defer();
+  d.then(t.end);
+  d.resolve();
+});
+test.cb(`should reject remotely`, (t) => {
+  const d = defer();
+  d.catch(t.end);
+  d.reject();
 });

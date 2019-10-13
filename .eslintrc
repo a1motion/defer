@@ -1,10 +1,8 @@
 {
   "extends": [
-    "a1motion"
+    "a1motion/typescript"
   ],
-  "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaVersion": 2018,
-    "sourceType": "module"
+    "project": "./tsconfig.eslint.json"
   }
 }
