@@ -24,7 +24,7 @@
   ],
   "types": "lib/index.d.ts",
   "devDependencies": {
-    "@types/node": "^12.7.12",
+    "@types/node": "^12.12.18",
     "@typescript-eslint/parser": "^2.3.3",
     "ava": "^2.4.0",
     "babel-eslint": "^10.0.3",
